@@ -1,15 +1,18 @@
 /** @param {string} name */
 function getNumberOfChars(name) {
+  return name.length;
   // return the number of characters in: name
 }
 
 /** @param {string} name */
 function getLower(name) {
+  return name.toLowerCase()
   // return name all in lower case (example: "ABC" becomes "abc")
 }
 
 /** @param {string} name */
 function getUpper(name) {
+  return name.toUpperCase()
   // return name all in upper case (example: "abc" becomes "ABC")
 }
 

@@ -10,12 +10,12 @@ Handles empty text box
  * @param {string} age
  */
 function getNextAge(age) {
-  if (age !== NaN) {
-    console.log("!== NaN");
+  if (age === undefined) {
     return 0;
   } else {
-    console.log("else");
+    
     return age + 1;
   }
 }
-console.log(getNextAge(3));
+console.log(getNextAge());
+console.log(getNextAge(18));
