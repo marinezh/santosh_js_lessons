@@ -24,18 +24,27 @@
 // user.age = user.age + 1;
 // console.log(user);
 
-function addOne(number = 0) {
-  return number + 1;
+// function addOne(number = 0) {
+//   return number + 1;
+// }
+
+// console.log(addOne(3));
+// console.log(addOne(5));
+// console.log(addOne());
+
+// function sum(a, b) {
+//   return a + b;
+// }
+
+// const sum = (a, b) => {
+//   return a + b;
+// };
+
+
+const questList = ["Angela", "Jack", "Pam", "James", "Jason"]
+let newGueast = prompt("enter your name");
+if (questList.includes(newGueast)) {
+  console.log("welcome");
+} else {
+  console.log("sorry, maybe next time");
 }
-
-console.log(addOne(3));
-console.log(addOne(5));
-console.log(addOne());
-
-function sum(a, b) {
-  return a + b;
-}
-
-const sum = (a, b) => {
-  return a + b;
-};
