@@ -1,5 +1,5 @@
 const getArticleTitle = () => {
-
+    return document.querySelector('.container h1').textContent;
 }
 
 // Sample usage - do not modify
