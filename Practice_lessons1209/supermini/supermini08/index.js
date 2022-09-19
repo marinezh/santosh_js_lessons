@@ -1,8 +1,42 @@
 class Passport {
+constructor(first, last) {
+this.firstName = first;
+this.lastName = last;
+};
+
   /**
    * @param {string} firstName
    * @param {string} lastName
    */
+
+getFirstName() {
+return this.firstName.toLowerCase();
+}
+
+getLastName() {
+return this.lastName.toUpperCase();
+}
+
+getFullName() {
+return this.firstName + ' ' + this.lastName 
+
+}
+
+getInitials() {
+return this.firstName[0] + '.' + this.lastName[0] + '.';
+
+}
+
+
+getIsValidName() {
+if ((this.firstName.length > 1) && (this.lastName.length) && (this.lastName[this.lastName.length -1]!= '.')){
+  return 'YES'
+} else {
+  return 'NO'
+}
+
+}
+
 }
 
 //Sample usage do not modify (but feel free to read)

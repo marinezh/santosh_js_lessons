@@ -1,16 +1,21 @@
 class NameVariations {
   /** @param {string} name */
-  constructor() {}
+  constructor(name) {
+    this.name = name;
+
+  }
 
   getNumberOfChars() {
-    // return the number of characters in: name
+return this.name.length;
   }
 
   getLower() {
+    return this.name.toLocaleLowerCase();
     // return name all in lower case (example: "ABC" becomes "abc")
   }
 
   getUpper() {
+    return this.name.toUpperCase().join(", s")
     // return name all in upper case (example: "abc" becomes "ABC")
   }
 }

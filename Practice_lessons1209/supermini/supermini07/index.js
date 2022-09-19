@@ -4,8 +4,29 @@ class Tasks {
   }
 
   /** @param {string} csvString */
-  importCsv(csvString) {}
+  importCsv(csvString) {
+this.task = csvString.split(", ")
+    
+  }
+
+  getCount() {
+return this.task.length;
+  }
+
+  getFirst (){
+return this.task[0];
+  }
+
+  getLast() {
+return this.task[this.task.length -1];
+  }
+
+  getUnformattedTasks() {
+// return this.task.map(e => e.toLowerCase())
+return this.task.join(',  ').toLocaleLowerCase()
+  }
 }
+
 
 //Sample usage do not modify (but feel free to read)
 const dropdown = document.querySelector('#csv-dropdown');
