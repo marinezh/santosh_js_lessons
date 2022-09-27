@@ -19,8 +19,6 @@ console.log(delayedWelcome("Sam"));
 console.log(delayedWelcome("Alex"));
 
 
-
-
 },3000);
  
 

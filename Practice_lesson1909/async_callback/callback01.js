@@ -8,6 +8,7 @@ const welcomeUser = (name, callback) => {
             callback(); // call the success callback
         }
     }, 1000);
+    
 }
 /**
 Update the sayHello function such that the console.log("Done!") runs after the welcomeUser function has finished executing.
@@ -21,4 +22,4 @@ Note that the welcomeUser function accepts a success callback as its second para
  }
 
 // Sample usage - do not modify
-sayHello("Sam");
+console.log(sayHello("Sam"));

@@ -18,7 +18,7 @@ Note that the sumGrades function accepts a success callback as its second parame
 /**
  * @param {number[]} grades
  */
-const calculateSum = (grades, value) => {
+const calculateSum = (grades) => {
     sumGrades(grades, (value) => {
         console.log("The sum is:" + value);
     });
