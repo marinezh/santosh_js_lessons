@@ -10,10 +10,11 @@ Handles empty text box
  * @param {string} age
  */
 function getNextAge(age) {
+
   if (age === undefined) {
     return 0;
   } else {
-    
+
     return age + 1;
   }
 }
