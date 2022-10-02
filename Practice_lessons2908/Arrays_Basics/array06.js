@@ -8,8 +8,8 @@ the apps array it receives as a parameter.
  * @param {array} apps
  */
 function getLastApp(apps) {
-const lastElem = apps.slice(-1);
-return lastElem;
+    const lastElem = apps.slice(-1);
+    return lastElem;
 }
 
 // Sample usage - do not modify
