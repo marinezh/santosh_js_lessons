@@ -1,10 +1,15 @@
 const todo = document.querySelector(".input__todo");
 const addBtn = document.querySelector(".btn__add");
 const list = document.querySelector("ul");
+let twoButtons = document.createElement("div");
 
+let todoList = [];
+console.log(todo.value);
+
+console.log(list);
+twoButtons.innerHTML = ''
 const addNewTask = () => {
-  console.log(todo.value);
-
+  
   // creation li elements with new tasks
   let ul = document.querySelector(".todo");
   let newTodo = document.createElement("li");
@@ -12,9 +17,12 @@ const addNewTask = () => {
 
   newTodo.innerHTML = `<input type='checkbox' class='checkbox'><span>${todo.value}</span><button class='delete'>❌</button>`;
   ul.prepend(newTodo);
+  todoList.push(newTodo)
+
+  console.log(todoList);
     console.log(newTodo);
-    console.log('length', newTodo.innerHTML.length);
-  // does/t work !!!!!
+  console.log('length', newTodo.innerHTML.length);
+
   if (newTodo.innerHTML.length > 0) {
     document.querySelector(".two__buttons").style.display = "flex";
   }
@@ -56,7 +64,7 @@ addBtn.addEventListener("click", addNewTask);
 // delete_buttons creation
 todoWrap = document.querySelector(".todo__wrap");
 console.log(todoWrap);
-let twoButtons = document.createElement("div");
+
 twoButtons.className = "two__buttons";
 twoButtons.innerHTML = `<button class = "delete__done"> Delete Done </button> <button class = "delete__all"> Delete All </button>`;
 todoWrap.append(twoButtons);
