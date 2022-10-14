@@ -4,10 +4,11 @@ const list = document.querySelector("ul");
 let twoButtons = document.createElement("div");
 
 let todoList = [];
-console.log(todo.value);
+console.log(todoList);
 
 console.log(list);
 twoButtons.innerHTML = ''
+console.log(twoButtons.innerHTML);
 const addNewTask = () => {
   
   // creation li elements with new tasks
@@ -68,3 +69,9 @@ console.log(todoWrap);
 twoButtons.className = "two__buttons";
 twoButtons.innerHTML = `<button class = "delete__done"> Delete Done </button> <button class = "delete__all"> Delete All </button>`;
 todoWrap.append(twoButtons);
+
+// twoButtons.innerHTML = ""
+// if (todoList.length > 0) {
+  
+//   document.querySelector(".two__buttons").style.display = "flex";
+// }
