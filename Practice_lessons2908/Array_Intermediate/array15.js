@@ -8,6 +8,8 @@ from the years parameter it receives.
  * @param {number[]} years
  */
 function getOddYears(years) {
+    let oddYears = years.filter(year => year % 2 !== 0);
+    return oddYears ? oddYears : ''
 
 }
 

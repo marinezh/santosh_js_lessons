@@ -9,9 +9,13 @@ Otherwise, it should return undefined.
  * @param {number} searchYear
  */
 function getYear(years, searchYear) {
-
+    if (years.includes(searchYear)) {
+    return searchYear
+    } else {
+        return undefined
+}
 }
 
 // Sample usage - do not modify
-console.log(getYear([2019, 2020, 2021], 2020)); // 2020
+console.log(getYear([2019, 2020, 2021], 2021)); // 2020
 console.log(getYear([2019, 2020, 2021], 1990)); // undefined
