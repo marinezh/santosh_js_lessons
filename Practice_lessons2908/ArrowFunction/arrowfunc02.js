@@ -9,11 +9,13 @@ Fix that without using an if condition.
  * @param {number[]} userIds
  */
 function logUserIds(userIds = []) {
-  userIds.forEach(function (userId) {
-    console.log(userId);
-  });
-}
+
+  userIds.forEach(id => console.log(id))
+  return userIds
+  };
+
 
 // Sample usage - do not modify
 logUserIds([10, 15, 14]); // should log every userId to the console
+logUserIds([10]); // should log every userId to the console
 logUserIds(); // should NOT fail
