@@ -5,11 +5,11 @@ Complete the function getFirstApp such that it returns the first element
 from the apps array it receives as a parameter.
 
 /**
- * @param {array} apps
+//  * @param {array} apps
  */
 function getFirstApp(apps) {
-const elem = apps[0];
-return elem;
+return apps[0];
+
 }
 
 // Sample usage - do not modify
