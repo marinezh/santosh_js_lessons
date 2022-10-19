@@ -11,7 +11,7 @@ Feel free to change the numbers in the grades array and check the output in the 
 /**
  * 
  */
- let grades = [10, 5, 15, 20];
+ let grades = [10, 5, 15, 20, 10];
 
  let sum = grades.reduce((total, current) => {
      console.log(`Total is ${total}`);
@@ -20,4 +20,8 @@ Feel free to change the numbers in the grades array and check the output in the 
      return total + current;
  }, 0);
 
- console.log(`Sum is ${sum}`);
+console.log(`Sum is ${sum}`);
+ 
+let arr = [1, 2, 3, 4, 5]
+let sum1 = arr.reduce((total, current) => total + current )
+console.log(sum1);

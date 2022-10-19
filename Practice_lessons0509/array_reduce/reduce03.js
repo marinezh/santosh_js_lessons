@@ -10,7 +10,8 @@ Complete the function such that it returns the sum of the numbers it receives as
  * @param {number[]} numbers
  */
 const sumNumbers = numbers => {
-
+    let sum = numbers.reduce((total, current) => total + current)
+    return sum;
 }
 
 // Sample usage - do not modify

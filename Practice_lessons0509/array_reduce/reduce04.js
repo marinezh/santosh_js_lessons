@@ -12,8 +12,8 @@ Complete the function multiplyNumbers such that it multiplies every number fro
 const multiplyNumbers = (numbers) => {
   return numbers.reduce((total, current) => {
     return total * current;
-    console.log(result);
-  }, 1);
+    
+  }, 0);
 };
 
 // Sample usage - do not modify
