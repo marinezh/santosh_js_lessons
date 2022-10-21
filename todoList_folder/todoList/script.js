@@ -1,29 +1,22 @@
-const todo = document.querySelector(".input__todo");
+const input = document.querySelector(".input__todo");
 const addBtn = document.querySelector(".btn__add");
 const list = document.querySelector("ul");
-let twoButtons = document.createElement("div");
+const twoButtons = document.createElement("div");
 
-let todoList = [];
-console.log(todoList);
 
-console.log(list);
-twoButtons.innerHTML = ''
-console.log(twoButtons.innerHTML);
 const addNewTask = () => {
-  
   // creation li elements with new tasks
   let ul = document.querySelector(".todo");
   let newTodo = document.createElement("li");
   newTodo.className = "new__todo";
 
-  newTodo.innerHTML = `<input type='checkbox' class='checkbox'><span>${todo.value}</span><button class='delete'>❌</button>`;
-  ul.prepend(newTodo);
-  todoList.push(newTodo)
+  newTodo.innerHTML = `<input type='checkbox' class='checkbox'><span>${input.value}</span><button class='delete'>❌</button>`;
 
-  console.log(todoList);
-    console.log(newTodo);
-  console.log('length', newTodo.innerHTML.length);
-
+//  do not add empty line
+  if (input.value != '') {
+   ul.prepend(newTodo);
+}
+ // adding delete buttons only after 1st task item exist
   if (newTodo.innerHTML.length > 0) {
     document.querySelector(".two__buttons").style.display = "flex";
   }
@@ -50,28 +43,23 @@ const addNewTask = () => {
   const deleteDone = document.querySelector(".delete__done");
   const deleteAllBtn = document.querySelector(".delete__all");
 
+  // function for button DELETE ALL
   const deletionAllfunc = () => {
     newTodo.remove();
       document.querySelector(".two__buttons").style.display = "none";
-      console.log('length', newTodo.innerHTML.length);
-      console.log('new', newTodo);
   };
 
   deleteDone.addEventListener("click", deleteFunc);
   deleteAllBtn.addEventListener("click", deletionAllfunc);
+  // clear input area text, agter adding item to the list
+  input.value = '';
 };
 addBtn.addEventListener("click", addNewTask);
 
 // delete_buttons creation
 todoWrap = document.querySelector(".todo__wrap");
-console.log(todoWrap);
 
 twoButtons.className = "two__buttons";
 twoButtons.innerHTML = `<button class = "delete__done"> Delete Done </button> <button class = "delete__all"> Delete All </button>`;
 todoWrap.append(twoButtons);
-
-// twoButtons.innerHTML = ""
-// if (todoList.length > 0) {
-  
-//   document.querySelector(".two__buttons").style.display = "flex";
-// }
+document.querySelector(".two__buttons").style.display = "none";
